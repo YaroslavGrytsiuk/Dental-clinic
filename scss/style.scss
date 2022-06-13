@@ -966,7 +966,7 @@ nav {
         margin-top: 50px;
     }
 
-    a {
+    button {
         display: block;
         flex: 0 1 50%;
         max-width: 188px;
@@ -1416,23 +1416,40 @@ nav {
     background: url(../img/form_bg.png) center / cover no-repeat;
 
     .consultation__form-wrapper {
-        padding: 26px 0;
+        .consultation__body {
+            max-width: 520px;
+            margin: 25px 0 25px auto;
+
+            @media(max-width:768px) {
+                margin: 25px auto;
+            }
+        }
 
         .consultation__form {
             text-align: center;
-            width: 520px;
-            height: 448px;
             background: $c4;
             box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
             border-radius: 20px;
             padding: 25px 55px;
-            margin-left: auto;
+            width: 100%;
+
+            @media(max-width:768px) {
+                margin: 25px auto;
+            }
+
+            @media(max-width:320px) {
+                padding: 25px 15px;
+            }
 
             .consultation__form-inputs {
                 display: flex;
                 flex-direction: column;
                 margin-top: 20px;
                 padding: 0 55px;
+
+                @media(max-width: 425px) {
+                    padding: 0;
+                }
 
                 .btn-style {
                     background: #FFF;
@@ -1489,6 +1506,10 @@ nav {
                 font-size: 28px;
                 line-height: 120%;
                 color: $sk;
+
+                @media(max-width:425px) {
+                    font-size: 24px;
+                }
             }
 
             .consultation__form-subtitle {
@@ -1497,6 +1518,10 @@ nav {
                 line-height: 29px;
                 color: $c1;
                 margin-top: 20px;
+
+                @media(max-width:425px) {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -1513,14 +1538,31 @@ footer {
 
     .footer__contacts {
         color: #fff;
-        width: 538px;
-        height: 480px;
+        max-width: 538px;
         background: $c1;
         opacity: 0.8;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
         border-radius: 20px;
         padding: 30px 130px 30px 60px;
         text-align: start;
+
+        @media(max-width:768px) {
+            margin: 25px auto;
+        }
+
+        @media(max-width:444px) {
+            font-size: 24px;
+        }
+
+        @media(max-width:444px) {
+            padding: 30px 15px;
+        }
+
+        h2 {
+            @media(max-width:425px) {
+                font-size: 36px;
+            }
+        }
 
         h2,
         a,
@@ -1576,6 +1618,10 @@ footer {
             font-size: 24px;
             line-height: 140%;
             margin-bottom: 15px;
+
+            @media(max-width:444px) {
+                font-size: 20px;
+            }
         }
 
         .fb-button {
@@ -1599,6 +1645,12 @@ footer {
             font-weight: 500;
             font-size: 18px;
             line-height: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @media(max-width: 767px) {
+                display: none;
+            }
 
             a {
                 color: $c1;
@@ -1610,6 +1662,7 @@ footer {
             }
 
             li {
+                text-align: center;
                 margin-right: 30px;
 
                 &:last-child {
