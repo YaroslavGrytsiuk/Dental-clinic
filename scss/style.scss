@@ -708,6 +708,10 @@ nav {
         display: flex;
         align-items: center;
 
+        @media(max-width:425px) {
+            display: none;
+        }
+
         img {
             display: block;
             width: 100%;
@@ -1219,6 +1223,10 @@ nav {
                 cursor: pointer;
                 transition: 0.2s;
 
+                @media (max-width: 666px) {
+                    padding: 25px 25px;
+                }
+
                 &:hover {
                     background: $c3;
                 }
@@ -1290,6 +1298,10 @@ nav {
                         font-size: 18px;
                         color: $c5;
                         padding-left: 10px;
+
+                        @media(max-width: 1024px) {
+                            font-size: 14px;
+                        }
                     }
                 }
             }

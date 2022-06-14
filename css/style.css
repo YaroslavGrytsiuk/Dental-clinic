@@ -119,6 +119,10 @@
   border: 0;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 *,
 *:before,
 *:after {
@@ -1080,6 +1084,12 @@ nav .nav__tel .callme:hover {
           align-items: center;
 }
 
+@media (max-width: 425px) {
+  .promotion__carousel-arrow {
+    display: none;
+  }
+}
+
 .promotion__carousel-arrow img {
   display: block;
   width: 100%;
@@ -1706,6 +1716,12 @@ nav .nav__tel .callme:hover {
   transition: 0.2s;
 }
 
+@media (max-width: 666px) {
+  .doctors .doctors__list-body .doctor__mini-cards-column .doctor__mini-card {
+    padding: 25px 25px;
+  }
+}
+
 .doctors .doctors__list-body .doctor__mini-cards-column .doctor__mini-card:hover {
   background: #BDF8F9;
 }
@@ -1797,6 +1813,12 @@ nav .nav__tel .callme:hover {
   font-size: 18px;
   color: #474551;
   padding-left: 10px;
+}
+
+@media (max-width: 1024px) {
+  .doctors .doctors__list-body .doctor__mini-cards-column .doctor__mini-card-text .doctor__mini-card-text-subtitle span {
+    font-size: 14px;
+  }
 }
 
 .doctors .doctor__cards-column {
