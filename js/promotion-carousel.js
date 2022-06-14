@@ -43,9 +43,9 @@
     ]
 
     let currentSlide = 0
+    const slideContainer = document.querySelector('.shares__body')
 
     function renderCarousel() {
-        const slideContainer = document.querySelector('.shares__body')
         slideContainer.innerHTML = slides[currentSlide]
         if (window.innerWidth >= 549) {
             const secondSlide = currentSlide + 1 >= slides.length ? 0 : currentSlide + 1
@@ -109,4 +109,33 @@
         }
     }
 
+
+    // -----swipe-slide----
+
+    slideContainer.addEventListener('touchstart', touchStart, false)
+    slideContainer.addEventListener('touchmove', touchMove, false)
+    let x1 = null
+    let y1 = null
+
+    function touchStart(e) {
+        const firstTouch = e.touches[0]
+        x1 = firstTouch.clientX
+        y1 = firstTouch.clientY
+    }
+
+    function touchMove(e) {
+        let x2 = e.touches[0].clientX
+        let y2 = e.touches[0].clientY
+        let xDiff = x2 - x1
+        let yDiff = y2 - y1
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+            if (xDiff > 0) nextSlide()
+            else prevSlide()
+        }
+        x1 = null
+        y1 = null
+    }
+
+    // ----------------------------
 })()
