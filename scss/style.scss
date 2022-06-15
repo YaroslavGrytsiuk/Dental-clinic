@@ -41,6 +41,10 @@ body {
     height: 100%;
 }
 
+.lock {
+    overflow: hidden;
+}
+
 section {
     margin-top: 90px !important;
 }
@@ -126,17 +130,20 @@ img {
     padding: 9px 45.5px;
     transition: 0.1s;
 
-    &:hover {
+    &:active {
         border: 2px solid $c1;
         background-color: #fff;
         color: $c1;
         line-height: 22px;
     }
 
-    &:active {
-        background: $sk;
-        color: #fff;
+    @media(min-width: 1023px) {
+        &:hover {
+            border: 2px solid $c1;
+        }
     }
+
+
 }
 
 .btn {
@@ -146,7 +153,7 @@ img {
     max-height: 40px;
     padding: 7px 0;
     background: rgba(255, 255, 255, 0.6);
-    border: 2px solid #099DBA;
+    border: 2px solid $c1;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
     border-radius: 30px;
     cursor: pointer;
@@ -156,8 +163,23 @@ img {
     line-height: 22px;
     color: $c1;
 
-    &:hover {
-        background: $c3;
+    &:active {
+        border: 2px solid $c1;
+        background-color: $c3;
+        color: $c1;
+    }
+
+    @media(min-width: 1023px) {
+
+        &:hover {
+            background-color: $c3;
+        }
+
+        &:active {
+            border: 2px solid $c1;
+            background-color: #fff;
+            color: $c1;
+        }
     }
 }
 
@@ -208,6 +230,52 @@ img {
 main {
     flex: 1 1 auto
 }
+
+.burger {
+
+    &__menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../img/main-bg.jpg) right/cover no-repeat;
+        z-index: 2;
+        padding: 15px 24px 50px 24px;
+        transition: top 0.3s ease-in 0.1s;
+        overflow: hidden;
+        margin: auto;
+        z-index: 20;
+
+        &.active {
+            top: 0;
+        }
+    }
+
+    &__menu-list {
+        list-style: none;
+        position: relative;
+        font-size: 0.92rem;
+        font-weight: 700;
+        line-height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+        z-index: 10;
+
+        a {
+            color: $c5;
+            opacity: 0.8;
+        }
+    }
+}
+
 
 nav {
     display: flex;
@@ -1224,7 +1292,7 @@ nav {
                 transition: 0.2s;
 
                 @media (max-width: 666px) {
-                    padding: 25px 25px;
+                    padding: 15px;
                 }
 
                 &:hover {
@@ -1242,7 +1310,7 @@ nav {
                 height: 116px;
                 width: 172px;
 
-                @media(max-width:768px) {
+                @media (min-width:666px) and (max-width:768px) {
                     display: none;
                 }
 

@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header id="header" class="header">
             <nav class="header__nav nav container">
                 <div class="nav__logo logo">
                     <div><img src="img/logo.svg" alt="logo"></div>
@@ -38,10 +38,25 @@
                     <a href="tel:+380991215767">+38 (099) 121-57-67</a>
                     <a class="callme" href="#">Перезвоните мне</a>
                 </div>
-                <div class="nav__burger">
+                <div class="nav__burger burger">
                     <div class="burger__img">
                         <img src="img/icons/burger-img.svg" alt="burger">
                     </div>
+                </div>
+                <div class="burger__menu-wrapper">
+                    <div class="logo">
+                        <div><img src="img/logo.svg" alt="logo"></div>
+                        <p>Стоматологическая<br>клиника</p>
+                    </div>
+                    <ul class="burger__menu-list">
+                        <li><a class="burger__link" href="#header">Главная</a></li>
+                        <li><a class="burger__link" href="#promotion">Акции</a></li>
+                        <li><a class="burger__link" href="#services">Услуги</a></li>
+                        <li><a class="burger__link" href="#doctors">Врачи</a></li>
+                        <li><a class="burger__link" href="#consultation">Консультация</a></li>
+                        <li><a class="burger__link" href="#licenses">Лицензии</a></li>
+                        <li><a class="burger__link" href="#contacts">Контакты</a></li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -450,8 +465,8 @@
                                         <span>спросить в мессенджере</span>
                                     </div>
                                     <div class="services__card-buttons-cta">
-                                        <button class="btn cta-hover">Записаться</button>
-                                        <button class="btn cta-hover">Выбрать врача</button>
+                                        <button class="btn">Записаться</button>
+                                        <button class="btn">Выбрать врача</button>
                                     </div>
                                 </div>
                             </div>
@@ -599,6 +614,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/header.js"></script>
     <script src="js/doctors.js"></script>
     <script src="js/promotion-carousel.js"></script>
 </body>
