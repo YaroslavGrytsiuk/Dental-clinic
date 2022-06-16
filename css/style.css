@@ -463,6 +463,12 @@ main {
   top: 0;
 }
 
+.burger__menu-wrapper .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .burger__menu-list {
   list-style: none;
   position: relative;
@@ -483,6 +489,9 @@ main {
           align-items: center;
   height: auto;
   z-index: 10;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 40%;
+          flex: 1 40%;
 }
 
 .burger__menu-list a {
@@ -530,6 +539,16 @@ nav .nav__burger {
 @media (max-width: 1024px) {
   nav .nav__burger {
     display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  nav .nav__burger {
+    position: fixed !important;
+    top: 25px;
+    right: 15px;
+    z-index: 500;
+    opacity: 0.8;
   }
 }
 
@@ -791,7 +810,6 @@ nav .nav__tel .callme:hover {
 @media (max-width: 1024px) {
   .main-block__text {
     display: inline-block;
-    margin-bottom: 0;
   }
 }
 
@@ -1611,6 +1629,12 @@ nav .nav__tel .callme:hover {
   margin: 0 0 30px 20px;
 }
 
+@media (max-width: 375px) {
+  .text-frame__list li {
+    margin: 0 0 30px 0;
+  }
+}
+
 .text-frame__btn {
   display: none;
 }
@@ -2213,6 +2237,7 @@ footer .footer__map {
 
 footer .map {
   position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 100%;

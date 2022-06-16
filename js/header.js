@@ -1,11 +1,14 @@
 (function () {
-    const iconBurger = document.querySelector(".nav__burger");
+    const iconBurgers = document.querySelectorAll(".burger");
+    let iconBurger
     const navigationsBody = document.querySelector(".burger__menu-wrapper");
-    iconBurger.addEventListener("click", function (e) {
-        document.body.classList.toggle("lock");
-        iconBurger.classList.toggle("active");
-        navigationsBody.classList.toggle("active");
-    });
+    for (iconBurger of iconBurgers) {
+        iconBurger.addEventListener("click", function (e) {
+            document.body.classList.toggle("lock");
+            iconBurger.classList.toggle("active");
+            navigationsBody.classList.toggle("active");
+        })
+    };
 
     const navLinks = document.querySelectorAll(".burger__link");
     navLinks.forEach((navLink) => {
