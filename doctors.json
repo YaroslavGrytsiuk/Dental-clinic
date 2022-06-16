@@ -1,0 +1,68 @@
+[
+    {
+        "id": "001",
+        "name": "Саидов Шамсулло Нарзуллоевич",
+        "qualification": "Врач-стоматолог",
+        "position": "Ведущий специалист",
+        "imgUrl": "img/doctor_mini_icon_1.png",
+        "img_bg_Url": "img/doctor_cards/doctor_card_bg_1.png",
+        "expirience": 25,
+        "certificates": "стоматология ортопедическая; стоматология хирургическая",
+        "orientation": "съемные, несъемные, безметалловые конструкции, цирконий, протезирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия"
+    },
+    {
+        "id": "002",
+        "name": "Анисимов Дмитрий Владимирович",
+        "qualification": "Врач-ортодонт",
+        "position": "",
+        "imgUrl": "img/doctor_mini_icon_2.png",
+        "img_bg_Url": "img/doctor_cards/doctor_card_bg_2.png",
+        "expirience": 15,
+        "certificates": "стоматология общей практики; стоматология ортопедическая",
+        "orientation": "протезирование зубов, хирургическое удаление, терапевтическое лечение и отбеливание"
+    },
+    {
+        "id": "003",
+        "name": "Варданян Давид Араевич",
+        "qualification": "Зубной техник",
+        "position": "",
+        "imgUrl": "img/doctor_mini_icon_3.png",
+        "img_bg_Url": "img/doctor_cards/doctor_card_bg_3.png",
+        "expirience": 5,
+        "certificates": "стоматология общей практики; стоматология ортопедическая",
+        "orientation": "терапевтическое лечение, все виды протезирования, хирургическое удаление зубов"
+    },
+    {
+        "id": "004",
+        "name": "Соха Анастасия Юрьевна",
+        "qualification": "Врач-стоматолог",
+        "position": "",
+        "imgUrl": "img/doctor_mini_icon_4.png",
+        "img_bg_Url": "img/doctor_cards/doctor_card_bg_4.png",
+        "expirience": 11,
+        "certificates": "стоматология общей практики; стоматология терапевтическая; стоматология ортодонтическая",
+        "orientation": "терапевтическое лечение, эстетическая реставрация зубов и исправление прикуса любой сложности"
+    },
+    {
+        "id": "005",
+        "name": "Иванова Оксана Григорьевна",
+        "qualification": "Стоматолог-хирург",
+        "position": "Врач висшей категории",
+        "imgUrl": "img/doctor_mini_icon_5.png",
+        "img_bg_Url": "img/doctor_cards/doctor_card_bg_5.png",
+        "expirience": 16,
+        "certificates": "стоматология общей практики; стоматология хирургическая",
+        "orientation": "имплантация, пародонтология, удаление зубов любой сложности"
+    },
+    {
+        "id": "006",
+        "name": "Синельщикова Елена Дмитриевна",
+        "qualification": "Врач-стоматолог",
+        "position": "",
+        "imgUrl": "img/doctor_mini_icon_6.png",
+        "img_bg_Url": "img/doctor_cards/doctor_card_bg_6.png",
+        "expirience": 8,
+        "certificates": "стоматология общей практики; стоматология хирургическая",
+        "orientation": "терапевтическое лечение, эстетическая реставрация, хирургическое удаление зубов , профессиональная гигиена и отбеливание"
+    }
+]

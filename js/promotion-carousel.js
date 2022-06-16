@@ -5,7 +5,9 @@
             <div class="share__img">
                 <img src="img/promotion_1.png" alt="promotion1">
                 <div class="share__button">
-                    <a href="#" class="btn">Участвовать</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promotion__carousel-modal">
+                Участвовать
+            </button>
                 </div>
             </div>
         </div>
@@ -16,7 +18,9 @@
                 <img src="img/promotion_2.png" alt="promotion2">
             </div>
             <div class="share__button">
-                <a href="#" class="btn">Участвовать</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promotion__carousel-modal">
+            Участвовать
+        </button>
             </div>
         </div>
     </div>`,
@@ -26,7 +30,9 @@
                 <img src="img/promotion_3.png" alt="promotion3">
             </div>
             <div class="share__button">
-                <a href="#" class="btn">Участвовать</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promotion__carousel-modal">
+            Участвовать
+        </button>
             </div>
         </div>
     </div>`,
@@ -36,7 +42,9 @@
             <img src="img/promotion_4.png" alt="promotion4">
         </div>
         <div class="share__button">
-            <a href="#" class="btn">Участвовать</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promotion__carousel-modal">
+        Участвовать
+    </button>
         </div>
     </div>
 </div>`,
@@ -69,7 +77,7 @@
         resetDotActiveClass()
         addDotActiveClass()
     }
-    setInterval(nextSlide, 3000)
+    // setInterval(nextSlide, 3000)
     renderCarousel()
 
     const btnNext = document.querySelector('.promotion__carousel .arrow__next')
@@ -138,4 +146,7 @@
     }
 
     // ----------------------------
+
+
+
 })()
