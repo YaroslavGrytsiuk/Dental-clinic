@@ -30,9 +30,9 @@
         })
     }
     miniCards[0].classList.add('doctor__mini-card-active')
+
     addEventListener(miniCards, addActiveStyle)
     addEventListener(miniCards, generateDoctorCard)
-
 
     function addActiveStyle() {
         miniCards.forEach(item => item.classList.remove('doctor__mini-card-active'))
@@ -40,30 +40,28 @@
     }
 
     function generateDoctorCard() {
-        const doctorCardColumn = document.querySelector('.doctor__cards-column')
         for (const doctor of doctors) {
             if (this.id == doctor.id) {
-                doctorCardColumn.innerHTML = `
-            <div class="doctor__card">
-            <div class="doctor__card-text">
-                <p class="doctor__card-text-title">${doctor.name}</p>
-                <p class="doctor__card-text-subtitle">${doctor.qualification} <span>${doctor.position}</span>
-                </p>
-            </div>
-            <div class="doctor__card-img"><img src="${doctor.img_bg_Url}"
-                    alt="doctor-card"></div>
-            <div class="doctor__card-about-doctor">
-                <p class="doctor__card-about-doctor-title">Опыт работы более ${doctor.expirience} лет</p>
-                <p class="doctor__card-about-doctor-subtitle">
-                    <span>Действующие сертификаты:</span>
-                    ${doctor.certificates}<br>
-                    <span>Направленность:</span>${doctor.orientation}
-                </p>
-            </div>
-        </div>
-        <button class="doctor__card-btn btn">Записаться</button>`
+                document.querySelectorAll('.doctor__card-text-title').forEach(item => item.textContent = doctor.name)
+                document.querySelectorAll('.doctor__card-text-subtitle').forEach(item => item.textContent = doctor.qualification)
+                document.querySelectorAll('.doctor__card-about-doctor-title').forEach(item => item.textContent = `Опыт работы более ${doctor.expirience} лет`)
+                document.querySelectorAll('.doctor__card-about-doctor-subtitle').forEach(item => item.innerHTML = (this.id == 001) ? `
+                <span>Действующие сертификаты:<br></span>стоматология ортопедическая;стоматология хирургическая<br><span>Все виды высококачественного протезирования:</span> ${doctor.orientation}` : `<span>Действующие сертификаты:<br></span>${doctor.certificates}<br><span>Направленность:</span>${doctor.orientation}`)
+                document.querySelectorAll('.doctor__card-img').forEach(item => item.firstChild.setAttribute('src', doctor.img_bg_Url))
             }
         }
     }
+
+    function addModalToMiniCard() {
+        if (window.innerWidth <= 665) {
+            miniCards.forEach(item => {
+                item.classList.add('btn-primary')
+                item.setAttribute('data-bs-toggle', 'modal')
+                item.setAttribute('data-bs-target', '#doctor__card')
+            })
+            document.querySelector('#doctor__card .doctor__cards-column').classList.add('modal-doctor-card')
+        }
+    }
+    addModalToMiniCard()
 })()
 

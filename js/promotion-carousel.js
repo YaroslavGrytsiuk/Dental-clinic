@@ -77,7 +77,7 @@
         resetDotActiveClass()
         addDotActiveClass()
     }
-    // setInterval(nextSlide, 3000)
+    setInterval(nextSlide, 3000)
     renderCarousel()
 
     const btnNext = document.querySelector('.promotion__carousel .arrow__next')

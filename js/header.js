@@ -1,7 +1,8 @@
 (function () {
     const iconBurgers = document.querySelectorAll(".burger");
-    let iconBurger
     const navigationsBody = document.querySelector(".burger__menu-wrapper");
+    let iconBurger
+
     for (iconBurger of iconBurgers) {
         iconBurger.addEventListener("click", function (e) {
             document.body.classList.toggle("lock");
@@ -22,10 +23,12 @@
         );
     });
 
-    // -----swipe-slide----
-    const slideContainer = document.querySelector('.burger__menu-wrapper')
-    slideContainer.addEventListener('touchstart', touchStart, false)
-    slideContainer.addEventListener('touchmove', touchMove, false)
+    // -----swipe-----
+    const wrapper = document.querySelector('.wrapper')
+
+    wrapper.addEventListener('touchstart', touchStart, false)
+    wrapper.addEventListener('touchmove', touchMove, false)
+
     let x1 = null
     let y1 = null
 
@@ -50,5 +53,17 @@
         }
         x1 = null
         y1 = null
+
+        window.onscroll = () => {
+            const scrollTopPosition = document.documentElement.scrollTop;
+            const burgerImg = document.querySelector('.burger__img')
+
+            if (scrollTopPosition > 130) {
+                burgerImg.classList.add('mini-burger')
+            }
+            if (scrollTopPosition < 130) {
+                burgerImg.classList.remove('mini-burger')
+            }
+        }
     }
 })();

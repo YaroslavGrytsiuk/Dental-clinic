@@ -12,8 +12,8 @@
 
 <body>
     <div class="wrapper">
-        <header id="header" class="header container">
-            <nav class="header__nav nav">
+        <header id="header" class="header">
+            <nav class="header__nav nav container">
                 <div class="nav__logo logo">
                     <div><img src="img/logo.svg" alt="logo"></div>
                     <p>Стоматологическая<br>клиника</p>
@@ -174,7 +174,7 @@
                             специальные
                             предложения</span></h3>
                 </div>
-                <!-- Modal -->
+                <!-- Modal promotion-->
                 <div class="modal fade" id="promotion__carousel-modal" data-bs-backdrop="static"
                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="promotion__carousel-modalLabel"
                     aria-hidden="true">
@@ -197,7 +197,7 @@
                 </div>
                 <div class="promotion__carousel">
                     <div class="shares__body">
-                        <!-- here insert carousel from js -->
+                        <!-- here insert promotion-carousel from js -->
                     </div>
                     <div class="promotion__carousel-arrow arrow__left">
                         <div class="arrow__prev">
@@ -250,7 +250,9 @@
                                 <div class="services__card-buttons-cta">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#consultation-modal">Записаться</button>
-                                    <button class="btn">Узнать цены</button>
+                                    <button class="btn btn-primary ask-price" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal">Узнать цены</button>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +284,8 @@
                                 <div class="services__card-buttons-cta">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#consultation-modal">Записаться</button>
-                                    <button class="btn">Узнать цены</button>
+                                    <button class="btn ask-price" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal">Узнать цены</button>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +319,8 @@
                                 <div class="services__card-buttons-cta">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#consultation-modal">Записаться</button>
-                                    <button class="btn">Узнать цены</button>
+                                    <button class="btn ask-price" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal">Узнать цены</button>
                                 </div>
                             </div>
                         </div>
@@ -349,7 +353,8 @@
                                 <div class="services__card-buttons-cta">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#consultation-modal">Записаться</button>
-                                    <button class="btn">Узнать цены</button>
+                                    <button class="btn ask-price" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal">Узнать цены</button>
                                 </div>
                             </div>
                         </div>
@@ -381,7 +386,8 @@
                                 <div class="services__card-buttons-cta">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#consultation-modal">Записаться</button>
-                                    <button class="btn">Узнать цены</button>
+                                    <button class="btn ask-price" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal">Узнать цены</button>
                                 </div>
                             </div>
                         </div>
@@ -412,7 +418,8 @@
                                 <div class="services__card-buttons-cta">
                                     <button class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#consultation-modal">Записаться</button>
-                                    <button class="btn">Узнать цены</button>
+                                    <button class="btn ask-price" data-bs-toggle="modal"
+                                        data-bs-target="#price-modal">Узнать цены</button>
                                 </div>
                             </div>
                         </div>
@@ -434,7 +441,8 @@
                                                 title="YouTube video player" frameborder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen></iframe>
-                                            <button class="video-frame__btn btn">Узнать цены</button>
+                                            <button class="video-frame__btn btn ask-price" data-bs-toggle="modal"
+                                                data-bs-target="#price-modal">Узнать цены</button>
                                         </div>
                                     </div>
                                 </div>
@@ -452,7 +460,8 @@
                                                 <li>Снижается развитие кариозного процесса</li>
                                                 <li>Все этапы безболезнены и атравматичны</li>
                                             </ul>
-                                            <button class="text-frame__btn btn">Узнать цены</button>
+                                            <button class="text-frame__btn btn ask-price" data-bs-toggle="modal"
+                                                data-bs-target="#price-modal">Узнать цены</button>
                                         </div>
                                     </div>
                                 </div>
@@ -507,10 +516,31 @@
                     </div>
                 </div>
             </div>
+            <!-- ---- MODAL Price ---- -->
+            <div class="modal fade" id="price-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="price-modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <h3>Скачайте прайс-лист и ознакомьтесь с ценами</h3>
+                            <div><img src="img/icons/file_type_pdf_icon.svg" alt="pdf-file"></div>
+                            <a href="files/price.pdf" download="" class="btn">Скачать</a>
+                            <div class="buttons-ask-in-messenger">
+                                <a href="https://telegram.org/?setln=uk" target="_blank"><img
+                                        src="img/icons/Telegram.svg" alt="telegram"></a>
+                                <a href="https://www.whatsapp.com/?lang=ru" target="_blank"><img
+                                        src="img/icons/WhatsApp.svg" alt="WhatsApp"></a>
+                                <span>спросить в мессенджере</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="doctors" class="doctors">
             <div class="doctors__container container">
-                <div class=" section__title">
+                <div class="section__title">
                     <h2>Врачи</h2>
                     <h3>В нашей клинике работают высококлассные специалисты с большим опытом<br>работы. Выберите
                         подходящего врача
@@ -544,6 +574,46 @@
                         <button class="doctor__card-btn btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#consultation-modal">Записаться</button>
                     </div>
+                    <!-- ----MODAL DOCTOR CARD------ -->
+                    <div class="modal fade" id="doctor__card" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="doctor__cardLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="modal-body">
+                                    <div class="doctor__cards-column">
+                                        <div class="doctor__card">
+                                            <div class="doctor__card-text">
+                                                <p class="doctor__card-text-title">Саидов Шамсулло Нарзуллоевич</p>
+                                                <p class="doctor__card-text-subtitle">Врач-стоматолог <span>Ведущий
+                                                        специалист</span>
+                                                </p>
+                                            </div>
+                                            <div class="doctor__card-img"><img
+                                                    src="img/doctor_cards/doctor_card_bg_1.png" alt="doctor-card"></div>
+                                            <div class="doctor__card-about-doctor">
+                                                <p class="doctor__card-about-doctor-title">Опыт работы более 25 лет</p>
+                                                <p class="doctor__card-about-doctor-subtitle">
+                                                    <span>Действующие сертификаты:</span>
+                                                    стоматология ортопедическая;
+                                                    стоматология хирургическая<br>
+                                                    <span>Все виды высококачественного протезирования:</span> съемные,
+                                                    несъемные, безметалловые конструкции, цирконий, проте-
+                                                    зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и
+                                                    хирургия
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button class="doctor__card-btn btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#consultation-modal">Записаться</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- --------- -->
                 </div>
             </div>
         </section>
@@ -561,18 +631,10 @@
                     документы.
                 </h3>
             </div>
-            <div class="licenses__carousel">
-                <div class="licenses__card"><img src="img/doctor_cards/diploma_1.png" alt="diploma"></div>
-                <div class="licenses__card"><img src="img/doctor_cards/diploma_2.png" alt="diploma"></div>
-                <div class="licenses__card"><img src="img/doctor_cards/diploma_3.png" alt="diploma"></div>
-                <div class="licenses__card"><img src="img/doctor_cards/diploma_4.png" alt="diploma"></div>
-            </div>
-            <div class="dots">
-                <span class="dot dot__active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+
+
+
+
         </section>
         <section id="consultation" class="consultation__form-section">
             <div class="consultation__form-wrapper container">
@@ -687,7 +749,7 @@
                     <li><a href="#licenses">Лицензии</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
-                <div class="nav__burger burger">
+                <div class="footer__burger burger">
                     <div class="burger__img">
                         <img src="img/icons/burger-img.svg" alt="burger">
                     </div>
@@ -698,6 +760,7 @@
     <script src="js/header.js"></script>
     <script src="js/doctors.js"></script>
     <script src="js/promotion-carousel.js"></script>
+    <script src="js/licenses-carousel.js"></script>
     <script src="js/consultation-form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script

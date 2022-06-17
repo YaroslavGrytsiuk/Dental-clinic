@@ -508,9 +508,36 @@ main {
   margin-left: auto;
 }
 
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.modal-body h3 {
+  font-size: 26px;
+  line-height: 140%;
+}
+
 .modal-body a {
-  margin: 60px auto 30px auto;
-  width: 80% !important;
+  margin: 30px auto;
+  width: 70% !important;
+}
+
+@media (max-width: 666px) {
+  .modal-body .modal-doctor-card {
+    display: block !important;
+  }
 }
 
 nav {
@@ -532,6 +559,22 @@ nav {
   }
 }
 
+@media (max-width: 500px) {
+  nav {
+    background: #F3FEFE;
+  }
+}
+
+nav .mini-burger {
+  position: fixed;
+  top: 5px;
+  right: 15px;
+  z-index: 300;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0.7;
+}
+
 nav .nav__burger {
   display: none;
 }
@@ -539,16 +582,6 @@ nav .nav__burger {
 @media (max-width: 1024px) {
   nav .nav__burger {
     display: block;
-  }
-}
-
-@media (max-width: 507px) {
-  nav .nav__burger {
-    position: fixed;
-    top: 25px;
-    right: 15px;
-    z-index: 500;
-    opacity: 0.9;
   }
 }
 
@@ -706,12 +739,6 @@ nav .nav__tel .callme:hover {
 @media (max-width: 768px) {
   nav .nav__tel {
     display: none;
-  }
-}
-
-@media (max-width: 500px) {
-  nav {
-    background: #F3FEFE;
   }
 }
 
@@ -1210,6 +1237,7 @@ nav .nav__tel .callme:hover {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 -15px;
+  min-height: 300px;
 }
 
 .shares__column {
@@ -2013,7 +2041,6 @@ nav .nav__tel .callme:hover {
           backdrop-filter: blur(12px);
   border-radius: 20px;
   max-width: 312px;
-  max-height: 322px;
   padding: 15px;
   position: absolute;
   bottom: 14px;
@@ -2057,17 +2084,6 @@ nav .nav__tel .callme:hover {
   text-align: center;
 }
 
-.licenses {
-  text-align: center;
-}
-
-.licenses .licenses__carousel {
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .consultation__form-section {
   background: url(../img/form_bg.png) center/cover no-repeat;
   min-height: 488px;
@@ -2095,13 +2111,7 @@ nav .nav__tel .callme:hover {
   min-height: 389px;
 }
 
-@media (max-width: 768px) {
-  .consultation__form-section .consultation__form-wrapper .consultation__form {
-    margin: 25px auto;
-  }
-}
-
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .consultation__form-section .consultation__form-wrapper .consultation__form {
     padding: 25px 15px;
   }
@@ -2202,7 +2212,7 @@ nav .nav__tel .callme:hover {
 
 @media (max-width: 425px) {
   .consultation__form-section .consultation__form-wrapper .consultation__form .consultation__form-title {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -2408,4 +2418,16 @@ footer .footer__nav ul li {
 
 footer .footer__nav ul li:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 507px) {
+  footer .footer__burger {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .footer__burger {
+    display: none;
+  }
 }

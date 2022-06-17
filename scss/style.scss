@@ -276,10 +276,26 @@ main {
 }
 
 .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+        font-size: 26px;
+        line-height: 140%;
+    }
 
     a {
-        margin: 60px auto 30px auto;
-        width: 80% !important;
+        margin: 30px auto;
+        width: 70% !important;
+    }
+
+    .modal-doctor-card {
+        @media(max-width: 666px) {
+            display: block !important;
+        }
     }
 }
 
@@ -294,19 +310,24 @@ nav {
         min-height: 130px;
     }
 
+    @media (max-width: 500px) {
+        background: $c4;
+    }
+
+    .mini-burger {
+        position: fixed;
+        top: 5px;
+        right: 15px;
+        z-index: 300;
+        transform: scale(0.7);
+        opacity: 0.7;
+    }
+
     .nav__burger {
         display: none;
 
         @media (max-width: 1024px) {
             display: block;
-        }
-
-        @media(max-width:507px) {
-            position: fixed;
-            top: 25px;
-            right: 15px;
-            z-index: 500;
-            opacity: 0.9;
         }
 
         .burger__img {
@@ -435,10 +456,6 @@ nav {
         @media(max-width: 768px) {
             display: none;
         }
-    }
-
-    @media (max-width: 500px) {
-        background: $c4;
     }
 }
 
@@ -824,6 +841,7 @@ nav {
         justify-content: center;
         align-items: center;
         margin: 0 -15px;
+        min-height: 300px;
     }
 
     &__column {
@@ -1471,7 +1489,6 @@ nav {
             backdrop-filter: blur(12px);
             border-radius: 20px;
             max-width: 312px;
-            max-height: 322px;
             padding: 15px;
             position: absolute;
             bottom: 14px;
@@ -1505,6 +1522,7 @@ nav {
             }
         }
 
+
         .doctor__card-btn {
             margin: 45px auto 0 auto;
         }
@@ -1515,14 +1533,8 @@ nav {
     text-align: center;
 }
 
-.licenses {
-    text-align: center;
 
-    .licenses__carousel {
-        margin-top: 30px;
-        display: flex;
-    }
-}
+
 
 .consultation__form-section {
     background: url(../img/form_bg.png) center / cover no-repeat;
@@ -1547,11 +1559,7 @@ nav {
             width: 100%;
             min-height: 389px;
 
-            @media(max-width:768px) {
-                margin: 25px auto;
-            }
-
-            @media(max-width:320px) {
+            @media(max-width:375px) {
                 padding: 25px 15px;
             }
 
@@ -1623,7 +1631,7 @@ nav {
                 color: $sk;
 
                 @media(max-width:425px) {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
             }
 
@@ -1800,6 +1808,16 @@ footer {
                     margin-right: 0;
                 }
             }
+        }
+    }
+
+    .footer__burger {
+        @media (max-width: 507px) {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            display: none;
         }
     }
 }
