@@ -613,6 +613,12 @@ main {
   }
 }
 
+@media (max-width: 500px) {
+  .header {
+    background: #F3FEFE;
+  }
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -629,12 +635,6 @@ nav {
 @media (max-width: 1024px) {
   nav {
     min-height: 130px;
-  }
-}
-
-@media (max-width: 500px) {
-  nav {
-    background: #F3FEFE;
   }
 }
 
@@ -787,7 +787,7 @@ nav .nav__tel a {
   color: #474551;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 992px) {
   nav .nav__tel a {
     font-size: 16px;
   }
@@ -2318,6 +2318,12 @@ footer .footer__map {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  footer .footer__map {
+    padding: 0;
+  }
+}
+
 footer .map {
   position: absolute;
   z-index: 0;
@@ -2330,7 +2336,16 @@ footer .map {
   border: 2px solid #33D9DA;
 }
 
+@media (max-width: 768px) {
+  footer .map {
+    position: relative;
+    height: 560px;
+  }
+}
+
 footer .footer__contacts {
+  position: relative;
+  z-index: 10;
   color: #fff;
   max-width: 538px;
   background: #099DBA;

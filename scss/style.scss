@@ -363,6 +363,11 @@ main {
     }
 }
 
+.header {
+    @media (max-width: 500px) {
+        background: $c4;
+    }
+}
 
 nav {
     display: flex;
@@ -372,10 +377,6 @@ nav {
 
     @media (max-width: 1024px) {
         min-height: 130px;
-    }
-
-    @media (max-width: 500px) {
-        background: $c4;
     }
 
     .mini-burger {
@@ -496,7 +497,7 @@ nav {
             letter-spacing: 0.025em;
             color: $c5;
 
-            @media(max-width: 425px) {
+            @media(max-width: 992px) {
                 font-size: 16px;
             }
 
@@ -1719,6 +1720,10 @@ footer {
     .footer__map {
         padding: 100px 0;
         position: relative;
+
+        @media(max-width:768px) {
+            padding: 0;
+        }
     }
 
     .map {
@@ -1730,9 +1735,16 @@ footer {
         height: 100%;
         object-fit: cover;
         border: 2px solid $c2;
+
+        @media(max-width:768px) {
+            position: relative;
+            height: 560px;
+        }
     }
 
     .footer__contacts {
+        position: relative;
+        z-index: 10;
         color: #fff;
         max-width: 538px;
         background: $c1;
