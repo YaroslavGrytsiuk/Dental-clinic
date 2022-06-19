@@ -33,7 +33,7 @@
     for (const formPhone of formPhones) {
         formPhone.addEventListener("input", function () {
             const reg = /[A-Za-zА-Яа-яЁё]/g,
-                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-]/g
+                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-ії]/g
             this.value = this.value.replace(reg, '')
             this.value = this.value.replace(regSymb, '')
         })
