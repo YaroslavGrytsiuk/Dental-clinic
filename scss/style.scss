@@ -265,6 +265,70 @@ main {
     }
 }
 
+.owl-carousel {
+    position: relative;
+
+
+    .owl-stage {
+        display: flex;
+    }
+}
+
+.owl-item-img {
+    height: 100%;
+    border-radius: 15px;
+    transition: 0.1s;
+    cursor: pointer;
+
+    &:hover {
+        filter: contrast(1.1);
+    }
+}
+
+
+
+.owl-nav {
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width:425px) {
+        display: none;
+    }
+
+    button {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: $c3  !important;
+        border-radius: 50%;
+        filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.05)) !important;
+    }
+}
+
+.owl-dots {
+    margin: 10px auto;
+    max-width: max-content;
+}
+
+.owl-dot {
+    width: 18px;
+    height: 18px;
+    background-color: $c3  !important;
+    border-radius: 50%;
+
+    &.active {
+        border: 1px solid $c2  !important;
+    }
+}
+
+.owl-dot+.owl-dot {
+    margin-left: 20px;
+}
+
+
 
 .modal-content {
     padding: 5px;
@@ -830,7 +894,6 @@ nav {
         background: $c4;
         border-radius: 50%;
         filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.05));
-        ;
     }
 }
 
@@ -910,7 +973,6 @@ nav {
     }
 }
 
-
 .services {
 
     .services__cards {
@@ -927,7 +989,6 @@ nav {
             @media(max-width: 1024px) {
                 flex: 0 1 100%;
             }
-
         }
 
         .services__card {
@@ -1522,7 +1583,6 @@ nav {
             }
         }
 
-
         .doctor__card-btn {
             margin: 45px auto 0 auto;
         }
@@ -1532,9 +1592,6 @@ nav {
 .after-doctors-container {
     text-align: center;
 }
-
-
-
 
 .consultation__form-section {
     background: url(../img/form_bg.png) center / cover no-repeat;

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Dental Clinic</title>
 </head>
@@ -624,17 +626,41 @@
                     alt="WhatsApp"></a>
             <span>спросить в мессенджере</span>
         </div>
-        <section id="licenses" class="licenses container">
+        <section id="licences" class="licences container">
             <div class="section__title">
                 <h2>Лицензии и награды</h2>
-                <h3>Деятельность клиники сертифицирована, мы имеем все необходимые лицензии и разрешающие
-                    документы.
+                <h3>Деятельность клиники сертифицирована, мы имеем все необходимые лицензии и сертификаты.
                 </h3>
             </div>
+            <div class="owl-carousel">
+                <img class="btn-primary owl-item-img" data-id="01" data-bs-toggle="modal"
+                    data-bs-target="#licences-modal" src="img/licences/licence_1.jpeg" alt="licence">
 
+                <img class="btn-primary owl-item-img" data-id="02" data-bs-toggle="modal"
+                    data-bs-target="#licences-modal" src="img/licences/licence_2.jpeg" alt="licence">
 
+                <img class="btn-primary owl-item-img" data-id="03" data-bs-toggle="modal"
+                    data-bs-target="#licences-modal" src="img/licences/licence_3.jpeg" alt="licence">
 
+                <img class="btn-primary owl-item-img" data-id="04" data-bs-toggle="modal"
+                    data-bs-target="#licences-modal" src="img/licences/licence_4.jpeg" alt="licence">
 
+                <img class="btn-primary owl-item-img" data-id="05" data-bs-toggle="modal"
+                    data-bs-target="#licences-modal" src="img/licences/licence_5.jpeg" alt="licence">
+            </div>
+            <!-- --------Modal licence certificate--------- -->
+            <div class="modal fade" id="licences-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="licences-modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img class='modal-item-img' src="img/licences/licence_1_fulSize.jpeg" alt="certificate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------- -->
         </section>
         <section id="consultation" class="consultation__form-section">
             <div class="consultation__form-wrapper container">
@@ -760,8 +786,29 @@
     <script src="js/header.js"></script>
     <script src="js/doctors.js"></script>
     <script src="js/promotion-carousel.js"></script>
-    <script src="js/licenses-carousel.js"></script>
+    <script src="js/licences-carousel.js"></script>
     <script src="js/consultation-form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 4,
+                margin: 30,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    426: {
+                        items: 4
+                    },
+                    responsiveBaseElement: '.container'
+                }
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0niSXXeabeIGA0xH4KwENqIvTiWQfzUo&callback=initMap&v=weekly"

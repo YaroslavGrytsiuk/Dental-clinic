@@ -65,6 +65,7 @@
         }
     }
 
+
     function nextSlide() {
         currentSlide = currentSlide + 1 >= slides.length ? 0 : currentSlide + 1
         renderCarousel()

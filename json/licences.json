@@ -1,0 +1,22 @@
+[
+    {
+        "id": "01",
+        "src": "img/licences/licence_1_fulSize.jpeg"
+    },
+    {
+        "id": "02",
+        "src": "img/licences/licence_2_fullSize.jpeg"
+    },
+    {
+        "id": "03",
+        "src": "img/licences/licence_3_fullSize.jpeg"
+    },
+    {
+        "id": "04",
+        "src": "img/licences/licence_4_fullSize.jpeg"
+    },
+    {
+        "id": "05",
+        "src": "img/licences/licence_5_fullsize.jpeg"
+    }
+]

@@ -1,6 +1,6 @@
 (async function () {
 
-    const response = await fetch('doctors.json')
+    const response = await fetch('json/doctors.json')
     const doctors = await response.json()
 
     function renderDoctorsMiniCards(doctors) {
