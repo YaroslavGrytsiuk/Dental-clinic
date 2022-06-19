@@ -18,11 +18,26 @@
     }
     form.addEventListener("submit", handleSubmit)
 
+    // --------Check symbols in form--------
+    const formNames = document.querySelectorAll(".formName")
+    for (const formName of formNames) {
+        formName.addEventListener("input", function () {
+            const regex = /[0-9]/g,
+                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-]/g
+            this.value = this.value.replace(regex, '')
+            this.value = this.value.replace(regSymb, '')
+        })
+    }
 
-    document.getElementById("formPhone").onkeypress = function (event) {
-        if (event.charCode && (event.charCode < 48 || event.charCode > 57))
-            return false;
-    };
+    const formPhones = document.querySelectorAll(".formPhone")
+    for (const formPhone of formPhones) {
+        formPhone.addEventListener("input", function () {
+            const reg = /[A-Za-zА-Яа-яЁё]/g,
+                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-]/g
+            this.value = this.value.replace(reg, '')
+            this.value = this.value.replace(regSymb, '')
+        })
+    }
 })();
 
 

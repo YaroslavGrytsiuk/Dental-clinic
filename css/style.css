@@ -2055,7 +2055,7 @@ nav .nav__tel .callme:hover {
 }
 
 .doctors .doctor__cards-column .doctor__card .doctor__card-text {
-  margin: 40px 0 0 30px;
+  padding: 40px 5px 0 30px;
 }
 
 @media (max-width: 1024px) {
@@ -2070,6 +2070,10 @@ nav .nav__tel .callme:hover {
   line-height: 34px;
   color: #474551;
   margin-bottom: 10px;
+  z-index: 3;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
@@ -2089,6 +2093,7 @@ nav .nav__tel .callme:hover {
   font-size: 22px;
   line-height: 140%;
   color: #099DBA;
+  max-width: 260px;
 }
 
 @media (max-width: 1024px) {

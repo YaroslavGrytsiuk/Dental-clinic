@@ -1502,7 +1502,7 @@ nav {
             }
 
             .doctor__card-text {
-                margin: 40px 0 0 30px;
+                padding: 40px 5px 0 30px;
 
                 @media(max-width: 1024px) {
                     margin: 20px 0 0 20px;
@@ -1514,6 +1514,10 @@ nav {
                     line-height: 34px;
                     color: $c5;
                     margin-bottom: 10px;
+                    z-index: 3;
+                    position: relative;
+                    max-width: 100%;
+                    overflow: hidden;
 
                     @media(max-width: 1024px) {
                         font-size: 24px;
@@ -1529,6 +1533,7 @@ nav {
                     font-size: 22px;
                     line-height: 140%;
                     color: $c1;
+                    max-width: 260px;
 
                     @media(max-width: 1024px) {
                         font-size: 20px;
