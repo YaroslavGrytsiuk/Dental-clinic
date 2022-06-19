@@ -17,6 +17,12 @@
         });
     }
     form.addEventListener("submit", handleSubmit)
+
+
+    document.getElementById("formPhone").onkeypress = function (event) {
+        if (event.charCode && (event.charCode < 48 || event.charCode > 57))
+            return false;
+    };
 })();
 
 
