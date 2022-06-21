@@ -49,6 +49,11 @@
         "ru": "Врачи",
         "ua": "Лікарі"
     },
+    "burger__link-consultation": {
+        "en": "Consultation",
+        "ru": "Консультации",
+        "ua": "Консультації"
+    },
     "burger__link-licences": {
         "en": "Licences",
         "ru": "Лицензии",

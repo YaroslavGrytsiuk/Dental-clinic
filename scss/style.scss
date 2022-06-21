@@ -63,7 +63,7 @@ img {
 
 .logo {
     display: flex;
-    max-width: 300px;
+    max-width: 270px;
     align-items: center;
     font-weight: 700;
     font-size: 20px;
@@ -447,7 +447,7 @@ nav {
     }
 
     & .work-address {
-        max-width: 190px;
+        max-width: 152px;
 
         @media (max-width: 507px) {
             display: none;

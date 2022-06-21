@@ -250,7 +250,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 300px;
+  max-width: 270px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -717,7 +717,7 @@ nav .work-time {
 }
 
 nav .work-address {
-  max-width: 190px;
+  max-width: 152px;
 }
 
 @media (max-width: 507px) {
