@@ -1,0 +1,112 @@
+{
+    "logo__title": {
+        "en": "Dental clinic",
+        "ru": "Стоматологическая клиника",
+        "ua": "Стоматологічна клініка"
+    },
+    "nav__address-title": {
+        "en": "Address",
+        "ru": "Адрес",
+        "ua": "Адреса"
+    },
+    "nav__address-subtitle": {
+        "en": "Odessa, st. Bolshaya Arnautskaya, 161",
+        "ru": "г. Одесса, ул. Большая Арнаутская д.161",
+        "ua": "м. Одеса, вул. Велика Арнаутська д.161"
+    },
+    "work-time-title": {
+        "en": "Working hours",
+        "ru": "Время работы",
+        "ua": "Графік роботи"
+    },
+    "work-time-subtitle": {
+        "en": "We work seven days a week 9:00 to 21:00",
+        "ru": "Работаем без выходных с 9:00 до 21:00",
+        "ua": "Працюємо без вихідних з 9:00 до 21:00"
+    },
+    "callme": {
+        "en": "Call me back",
+        "ru": "Перезвоните мне",
+        "ua": "Передзвоніть мені"
+    },
+    "burger__link-main": {
+        "en": "Main",
+        "ru": "Главная",
+        "ua": "Головна"
+    },
+    "burger__link-promotion": {
+        "en": "Stock",
+        "ru": "Акции",
+        "ua": "Акції"
+    },
+    "burger__link-services": {
+        "en": "Services",
+        "ru": "Услуги",
+        "ua": "Послуги"
+    },
+    "burger__link-doctors": {
+        "en": "Doctors",
+        "ru": "Врачи",
+        "ua": "Лікарі"
+    },
+    "burger__link-licences": {
+        "en": "Licences",
+        "ru": "Лицензии",
+        "ua": "Ліцензії"
+    },
+    "burger__link-contacts": {
+        "en": "Сontacts",
+        "ru": "Контакты",
+        "ua": "Контакти"
+    },
+    "main-block__title": {
+        "en": "Treatment and prosthetics of teeth according to European standards",
+        "ru": "Лечение и протезирование зубов по Европейским стандартам",
+        "ua": "Лікування та протезування зубів за Європейськими стандартами"
+    },
+    "main-block__subtitle": {
+        "en": "We will provide 2-3 quality treatment plans for your budget",
+        "ru": "Предоставим 2-3 плана качественного лечения под ваш бюджет",
+        "ua": "Надаємо 2-3 плани якісного лікування під ваш бюджет"
+    },
+    "main-block__text": {
+        "en": "Sign up for a <span>free</span> initial consultation - dental diagnostics",
+        "ru": "Запишитесь на <span>бесплатную</span> первичную консультацию - диагностику зубов",
+        "ua": "Запишіться на <span>безкоштовну</span> первинну консультацію – діагностику зубів"
+    },
+    "cta": {
+        "en": "Sign up",
+        "ru": "Записаться",
+        "ua": "Записатися"
+    },
+    "benefit__title-1": {
+        "en": "Working since 2011",
+        "ru": "Работаем с 2011 года",
+        "ua": "Працюємо з 2011 року"
+    },
+    "benefit__subtitle-1": {
+        "en": "Many years of experience is a guarantee of quality service",
+        "ru": "Многолетний опыт работы - залог качественного сервиса",
+        "ua": "Багаторічний досвід роботи - запорука якісного сервісу"
+    },
+    "benefit__title-2": {
+        "en": "Experienced Doctors",
+        "ru": "Опытные врачи",
+        "ua": "Досвідчені лікарі"
+    },
+    "benefit__subtitle-2": {
+        "en": "Huge experience of staff and coherence of work",
+        "ru": "Огромный опыт персонала и слаженность работы",
+        "ua": "Величезний досвід персоналу та злагодженість роботи"
+    },
+    "benefit__title-3": {
+        "en": "Unique Approach",
+        "ru": "Уникальный подход",
+        "ua": "Унікальний підхід"
+    },
+    "benefit__subtitle-3": {
+        "en": "We use modern technologies in our work",
+        "ru": "Применяем в своей работе современные технологии",
+        "ua": "Застосовуємо у своїй роботі сучасні технології"
+    }
+}

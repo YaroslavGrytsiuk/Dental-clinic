@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/logo.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="owl/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/owl.theme.default.min.css">
@@ -19,16 +20,17 @@
                 <nav class="header__nav nav">
                     <div class="nav__logo logo">
                         <div><img src="img/logo.svg" alt="logo"></div>
-                        <p>Стоматологическая<br>клиника</p>
+                        <p class="logo__title">Стоматологическая клиника</p>
                     </div>
                     <div class="nav__address work-address">
                         <a href="#footer__map" class="nav__address-title">Адрес</a>
-                        <a href="#footer__map" class="nav__address-subtitle">г. Одесса, ул. Большая<br>Арнаутская д.
+                        <a href="#footer__map" class="nav__address-subtitle">г. Одесса, ул. Большая Арнаутская д.
                             161</a>
                     </div>
                     <div class="nav__address work-time">
-                        <a href="#footer__map" class="nav__address-title">Время работы</a>
-                        <a href="#footer__map" class="nav__address-subtitle">Работаем без выходных<br>с 9:00 до
+                        <a href="#footer__map" class="nav__address-title work-time-title">Время работы</a>
+                        <a href="#footer__map" class="nav__address-subtitle work-time-subtitle">Работаем без выходных с
+                            9:00 до
                             21:00</a>
                     </div>
                     <div class="nav__social-icons">
@@ -50,17 +52,23 @@
                     <div class="burger__menu-wrapper">
                         <div class="logo">
                             <div><img src="img/logo.svg" alt="logo"></div>
-                            <p>Стоматологическая<br>клиника</p>
+                            <p class="logo__title">Стоматологическая<br>клиника</p>
                         </div>
                         <ul class="burger__menu-list">
-                            <li><a class="burger__link" href="#header">Главная</a></li>
-                            <li><a class="burger__link" href="#promotion">Акции</a></li>
-                            <li><a class="burger__link" href="#services">Услуги</a></li>
-                            <li><a class="burger__link" href="#doctors">Врачи</a></li>
-                            <li><a class="burger__link" href="#consultation">Консультация</a></li>
-                            <li><a class="burger__link" href="#licences">Лицензии</a></li>
-                            <li><a class="burger__link" href="#contacts">Контакты</a></li>
+                            <li><a class="burger__link burger__link-main" href="#header">Главная</a></li>
+                            <li><a class="burger__link burger__link-promotion" href="#promotion">Акции</a></li>
+                            <li><a class="burger__link burger__link-services" href="#services">Услуги</a></li>
+                            <li><a class="burger__link burger__link-doctors" href="#doctors">Врачи</a></li>
+                            <li><a class="burger__link burger__link-consultation" href="#consultation">Консультация</a>
+                            </li>
+                            <li><a class="burger__link burger__link-licences" href="#licences">Лицензии</a></li>
+                            <li><a class="burger__link burger__link-contacts" href="#contacts">Контакты</a></li>
                         </ul>
+                    </div>
+                    <div class="header__lang">
+                        <span class="lang" data-langID="ua">UA</span>
+                        <span class="lang" data-langID="ru">RU</span>
+                        <span class="lang" data-langID="en">EN</span>
                     </div>
                 </nav>
             </div>
@@ -93,8 +101,9 @@
                             <div class="benefits__item benefit">
                                 <div class="benefit__icon"><img src="img/icons/Calendar.svg" alt="calendar"></div>
                                 <div class="benefit__text">
-                                    <p class="benefit__title">Работаем с 2011 года</p>
-                                    <p class="benefit__subtitle">Многолетний опыт работы - залог качественного сервиса
+                                    <p class="benefit__title benefit__title-1">Работаем с 2011 года</p>
+                                    <p class="benefit__subtitle benefit__subtitle-1">Многолетний опыт работы - залог
+                                        качественного сервиса
                                     </p>
                                 </div>
                             </div>
@@ -103,8 +112,9 @@
                             <div class="benefits__item benefit">
                                 <div class="benefit__icon"><img src="img/icons/UserGear.svg" alt="UserGear"></div>
                                 <div class="benefit__text">
-                                    <p class="benefit__title">Опытные врачи</p>
-                                    <p class="benefit__subtitle">Огромный опыт персонала и слаженность работы
+                                    <p class="benefit__title benefit__title-2">Опытные врачи</p>
+                                    <p class="benefit__subtitle benefit__subtitle-2">Огромный опыт персонала и
+                                        слаженность работы
                                     </p>
                                 </div>
                             </div>
@@ -113,8 +123,9 @@
                             <div class="benefits__item benefit">
                                 <div class="benefit__icon"><img src="img/icons/Fingerprint.svg" alt="Fingerprint"></div>
                                 <div class="benefit__text">
-                                    <p class="benefit__title">Уникальный подход</p>
-                                    <p class="benefit__subtitle">Применяем в своей работе современные технологии
+                                    <p class="benefit__title benefit__title-3">Уникальный подход</p>
+                                    <p class="benefit__subtitle benefit__subtitle-3">Применяем в своей работе
+                                        современные технологии
                                     </p>
                                 </div>
                             </div>
@@ -683,9 +694,9 @@
                         <div class="consultation__form-inputs">
                             <form class="consultation__form-formspree" id="consultation__form"
                                 action="https://formspree.io/f/mgedqbdo" method="POST">
-                                <input class="btn-style formName" type="text" name="client-name" placeholder="Имя"
+                                <input class="btn-style form-name" type="text" name="client-name" placeholder="Имя"
                                     required>
-                                <input class="btn-style formPhone" type="tel" name="client-phone" placeholder="Телефон"
+                                <input class="btn-style form-phone" type="tel" name="client-phone" placeholder="Телефон"
                                     required>
                                 <button class="cta-style" type="submit">Записаться</button>
                             </form>
@@ -712,9 +723,9 @@
                                         <div class="consultation__form-inputs">
                                             <form class="consultation__form-formspree" id="consultation__form"
                                                 action="https://formspree.io/f/mgedqbdo" method="POST">
-                                                <input class="btn-style formName" type="text" name="client-name"
+                                                <input class="btn-style form-name" type="text" name="client-name"
                                                     placeholder="Имя" required>
-                                                <input class="btn-style formPhone" type="tel" name="client-phone"
+                                                <input class="btn-style form-phone" type="tel" name="client-phone"
                                                     placeholder="Телефон" required>
                                                 <button class="cta-style" type="submit">Записаться</button>
                                             </form>
@@ -734,7 +745,7 @@
                     <div class="footer__contacts">
                         <h2>Контакты</h2>
                         <div class="footer__contacts-text">
-                            <p> Одесса, ул. Большая Арнаудская д. 161</p>
+                            <p> Одесса, ул. Большая Арнаутская д. 161</p>
                             <a class="get-direction"
                                 href="https://www.google.com/maps/dir//%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0+%D0%90%D1%80%D0%BD%D0%B0%D1%83%D1%82%D1%81%D1%8C%D0%BA%D0%B0,+161,+%D0%9E%D0%B4%D0%B5%D1%81%D0%B0,+%D0%9E%D0%B4%D0%B5%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+65000/@46.473316,30.726724,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x40c63185f7e685cb:0x12106e046587c3e9!2m2!1d30.7267236!2d46.4733159?hl=ru"
                                 target="_blank">Проложить
@@ -755,7 +766,7 @@
                             <span>спросить в мессенджере</span>
                         </div>
                         <a href="https://www.facebook.com/" target="_blank" class="fb-button"><img width="28px"
-                                height="28px" src="img/icons/icon-facebook.svg" alt="whatsApp">
+                                height="28px" src="img/icons/icon-facebook.svg" alt="facebook">
                             <span>Наша группа в Facebook</span></a>
                     </div>
                 </div>
@@ -787,6 +798,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
     <script src="js/header.js"></script>
     <script src="js/doctors.js"></script>
     <script src="js/promotion-carousel.js"></script>

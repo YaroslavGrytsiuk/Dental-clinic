@@ -118,7 +118,6 @@
         }
     }
 
-
     // -----swipe-slide----
 
     slideContainer.addEventListener('touchstart', touchStart, false)

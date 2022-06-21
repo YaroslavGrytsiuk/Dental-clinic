@@ -367,13 +367,40 @@ main {
     @media (max-width: 500px) {
         background: $c4;
     }
+
+    &__lang {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        color: $c1;
+    }
 }
+
+.lang {
+    cursor: pointer;
+
+    @media(min-width: 769px) {
+
+        &:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 160px;
+    position: relative;
 
     @media (max-width: 1024px) {
         min-height: 130px;
@@ -412,12 +439,16 @@ nav {
     }
 
     & .work-time {
+        max-width: 160px;
+
         @media (max-width: 992px) {
             display: none;
         }
     }
 
     & .work-address {
+        max-width: 190px;
+
         @media (max-width: 507px) {
             display: none;
         }
@@ -882,11 +913,13 @@ nav {
         top: 0;
         left: 0;
         padding-left: -15px;
+        cursor: pointer;
     }
 
     .arrow__right {
         top: 0;
         right: 0;
+        cursor: pointer;
     }
 
     .arrow__prev,
@@ -1838,11 +1871,17 @@ footer {
         }
 
         .fb-button {
-            display: inline-block;
+            display: flex;
             margin-top: 10px;
             font-weight: 600;
-            font-size: 18px;
+            align-items: center;
+            font-size: 14px;
             line-height: 140%;
+
+            span {
+                padding-left: 10px;
+                padding-top: 6px;
+            }
         }
     }
 

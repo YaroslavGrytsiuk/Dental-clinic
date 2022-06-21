@@ -19,25 +19,28 @@
     form.addEventListener("submit", handleSubmit)
 
     // --------Check symbols in form--------
-    const formNames = document.querySelectorAll(".formName")
+    const formNames = document.querySelectorAll(".form-name")
     for (const formName of formNames) {
         formName.addEventListener("input", function () {
             const regex = /[0-9]/g,
-                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-]/g
+                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-?<>|}{}]/g
             this.value = this.value.replace(regex, '')
             this.value = this.value.replace(regSymb, '')
+            if (this.value.length <= 2 || this.value) return false
         })
     }
 
-    const formPhones = document.querySelectorAll(".formPhone")
+    const formPhones = document.querySelectorAll(".form-phone")
     for (const formPhone of formPhones) {
         formPhone.addEventListener("input", function () {
             const reg = /[A-Za-zА-Яа-яЁё]/g,
-                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-ії]/g
+                regSymb = /[!@#$%^&*()_+="№:,.;()_+=-ії|}{?><}]/g
             this.value = this.value.replace(reg, '')
             this.value = this.value.replace(regSymb, '')
+            if (this.value.length > 12) return false
         })
     }
+
 })();
 
 

@@ -54,6 +54,7 @@
         x1 = null
         y1 = null
 
+        // -------add mini burger class-----
         window.onscroll = () => {
             const scrollTopPosition = document.documentElement.scrollTop;
             const burgerImg = document.querySelector('.burger__img')

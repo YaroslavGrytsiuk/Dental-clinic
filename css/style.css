@@ -619,6 +619,29 @@ main {
   }
 }
 
+.header__lang {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  color: #099DBA;
+}
+
+.lang {
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .lang:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,6 +653,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 160px;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -682,10 +706,18 @@ nav .nav__burger .burger__img {
   }
 }
 
+nav .work-time {
+  max-width: 160px;
+}
+
 @media (max-width: 992px) {
   nav .work-time {
     display: none;
   }
+}
+
+nav .work-address {
+  max-width: 190px;
 }
 
 @media (max-width: 507px) {
@@ -1283,11 +1315,13 @@ nav .nav__tel .callme:hover {
   top: 0;
   left: 0;
   padding-left: -15px;
+  cursor: pointer;
 }
 
 .promotion .arrow__right {
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 
 .promotion .arrow__prev,
@@ -2454,11 +2488,21 @@ footer .footer__contacts .footer__tel {
 }
 
 footer .footer__contacts .fb-button {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 10px;
   font-weight: 600;
-  font-size: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
   line-height: 140%;
+}
+
+footer .footer__contacts .fb-button span {
+  padding-left: 10px;
+  padding-top: 6px;
 }
 
 footer .footer__nav {
