@@ -434,6 +434,10 @@ main {
           flex: 1 1 auto;
 }
 
+.burger {
+  text-decoration: inherit;
+}
+
 .burger__menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,7 +455,7 @@ main {
   height: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../img/main-bg.jpg) right/cover no-repeat;
   z-index: 2;
-  padding: 15px 24px 50px 24px;
+  padding: 15px 24px 30px 24px;
   -webkit-transition: top 0.3s ease-in 0.1s;
   transition: top 0.3s ease-in 0.1s;
   overflow: hidden;
@@ -464,9 +468,9 @@ main {
 }
 
 .burger__menu-wrapper .logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .burger__menu-list {
@@ -475,28 +479,20 @@ main {
   font-size: 0.92rem;
   font-weight: 700;
   line-height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: auto;
-  z-index: 10;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 40%;
-          flex: 1 40%;
+  margin: auto;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-align: center;
 }
 
 .burger__menu-list a {
   color: #474551;
   opacity: 0.8;
+}
+
+.burger__menu-list li {
+  list-style: none;
 }
 
 .owl-carousel {
@@ -626,8 +622,23 @@ main {
   color: #099DBA;
 }
 
+@media (max-width: 375px) {
+  .header__nav {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .lang {
+  color: inherit;
   cursor: pointer;
+  background: inherit;
+}
+
+@media (max-width: 500px) {
+  .lang {
+    background: #F3FEFE;
+  }
 }
 
 @media (min-width: 769px) {
@@ -637,7 +648,7 @@ main {
   }
 }
 
-.active {
+.lang-active {
   font-weight: bold;
   text-decoration: underline;
 }
@@ -1455,7 +1466,7 @@ nav .nav__tel .callme:hover {
   border-radius: 20px;
   width: 100%;
   height: 100%;
-  padding: 30px 2px 40px 30px;
+  padding: 0 0 30px 0;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1471,6 +1482,7 @@ nav .nav__tel .callme:hover {
 
 .services .services__cards .services__card .services__card-content {
   text-align: start;
+  padding: 30px 15px 5px 30px;
 }
 
 .services .services__cards .services__card .services__card-content h3 {

@@ -21,7 +21,7 @@
     function addClassActive() {
         for (const language of languages) {
             if (language.getAttribute("data-langID") == hash) {
-                language.classList.add('active')
+                language.classList.add('lang-active')
             }
         }
     }
@@ -43,10 +43,13 @@
         document.querySelector('title').textContent = languagesAll['logo__title'][hash]
 
         for (let key in languagesAll) {
-            let elem = document.querySelector(`.${key}`)
-            if (elem) {
-                elem.innerHTML = languagesAll[key][hash]
+            let elems = document.querySelectorAll(`.${key}`)
+            for (const elem of elems) {
+                if (elem) {
+                    elem.innerHTML = languagesAll[key][hash]
+                }
             }
+
         }
     }
     changeLanduage()

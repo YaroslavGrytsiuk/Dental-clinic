@@ -217,6 +217,7 @@ main {
 }
 
 .burger {
+    text-decoration: inherit;
 
     &__menu-wrapper {
         display: flex;
@@ -229,18 +230,19 @@ main {
         height: 100%;
         background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../img/main-bg.jpg) right/cover no-repeat;
         z-index: 2;
-        padding: 15px 24px 50px 24px;
+        padding: 15px 24px 30px 24px;
         transition: top 0.3s ease-in 0.1s;
         overflow: hidden;
         margin: auto;
         z-index: 20;
+
 
         &.active {
             top: 0;
         }
 
         .logo {
-            flex: 1;
+            flex: 0;
         }
     }
 
@@ -250,24 +252,23 @@ main {
         font-size: 0.92rem;
         font-weight: 700;
         line-height: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: auto;
-        z-index: 10;
-        flex: 1 40%;
+        margin: auto;
+        max-width: fit-content;
+        text-align: center;
 
         a {
             color: $c5;
             opacity: 0.8;
+        }
+
+        li {
+            list-style: none;
         }
     }
 }
 
 .owl-carousel {
     position: relative;
-
 
     .owl-stage {
         display: flex;
@@ -373,11 +374,24 @@ main {
         top: 20px;
         right: 0;
         color: $c1;
+
+    }
+
+    &__nav {
+        @media(max-width:375px) {
+            flex-wrap: nowrap;
+        }
     }
 }
 
 .lang {
+    color: inherit;
     cursor: pointer;
+    background: inherit;
+
+    @media (max-width: 500px) {
+        background: $c4;
+    }
 
     @media(min-width: 769px) {
 
@@ -388,7 +402,7 @@ main {
     }
 }
 
-.active {
+.lang-active {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -580,7 +594,6 @@ nav {
         @media (max-width: 1024px) {
             padding: 30px 0 70px 0;
         }
-
 
         @media (max-width: 425px) {
             padding: 20px 0 106px 0;
@@ -1031,7 +1044,7 @@ nav {
             border-radius: 20px;
             width: 100%;
             height: 100%;
-            padding: 30px 2px 40px 30px;
+            padding: 0 0 30px 0;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -1039,6 +1052,7 @@ nav {
 
             .services__card-content {
                 text-align: start;
+                padding: 30px 15px 5px 30px;
 
                 h3 {
                     margin-bottom: 9px;
