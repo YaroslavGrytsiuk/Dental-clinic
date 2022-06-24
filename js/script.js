@@ -1,11 +1,11 @@
 // -------multi language----
+let hash
 (async function () {
 
     const response = await fetch(`json/languages.json`)
     const languagesAll = await response.json()
 
     let langId
-    let hash
     const allLanguages = ['en', 'ru', 'ua']
     const languages = document.querySelectorAll('.lang')
 

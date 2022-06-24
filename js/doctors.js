@@ -1,6 +1,6 @@
 (async function () {
 
-    const response = await fetch(`json/doctors-ru.json`)
+    const response = await fetch(`json/doctors.json`)
     const doctors = await response.json()
 
     function renderDoctorsMiniCards(doctors) {
@@ -51,6 +51,15 @@
             }
         }
     }
+    function renderFirstDoctorCard() {
+        const doctor = doctors[0]
+        document.querySelectorAll('.doctor__card-text-title').forEach(item => item.textContent = doctor.name)
+        document.querySelectorAll('.doctor__card-text-subtitle').forEach(item => item.textContent = doctor.qualification)
+        document.querySelectorAll('.doctor__card-about-doctor-title').forEach(item => item.textContent = `Опыт работы более ${doctor.expirience} лет`)
+        document.querySelectorAll('.doctor__card-about-doctor-subtitle').forEach(item => item.innerHTML = `
+                <span>Действующие сертификаты:<br></span>стоматология ортопедическая;стоматология хирургическая<br><span>Все виды высококачественного протезирования:</span> ${doctor.orientation}`)
+        document.querySelectorAll('.doctor__card-img').forEach(item => item.firstChild.setAttribute('src', doctor.img_bg_Url))
+    }
 
     function addModalToMiniCard() {
         if (window.innerWidth <= 665) {
@@ -62,6 +71,10 @@
             document.querySelector('#doctor__card .doctor__cards-column').classList.add('modal-doctor-card')
         }
     }
+    renderFirstDoctorCard()
     addModalToMiniCard()
+
+
+    console.log(hash)
 })()
 

@@ -1462,6 +1462,7 @@ nav {
                 flex: 1;
                 align-self: center;
                 text-align: start;
+                padding: 5px;
 
                 .doctor__mini-card-text-title {
                     font-weight: 500;
@@ -1541,7 +1542,7 @@ nav {
                 right: 0;
                 bottom: 0;
 
-                @media(max-width: 1155px) {
+                @media(max-width: 1200px) {
                     position: relative;
                     width: 50%;
                     margin: auto;
@@ -1550,6 +1551,8 @@ nav {
 
             .doctor__card-text {
                 padding: 40px 5px 0 30px;
+                z-index: 3;
+                position: relative;
 
                 @media(max-width: 1024px) {
                     margin: 20px 0 0 20px;
@@ -1561,8 +1564,6 @@ nav {
                     line-height: 34px;
                     color: $c5;
                     margin-bottom: 10px;
-                    z-index: 3;
-                    position: relative;
                     max-width: 100%;
                     overflow: hidden;
 
@@ -1611,7 +1612,7 @@ nav {
             @media(max-width: 1155px) {
                 position: relative;
                 max-width: 100%;
-                margin-top: -20px;
+                margin: -20px 10px 0px 10px;
                 left: 0;
                 height: 100%;
             }

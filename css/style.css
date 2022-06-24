@@ -1991,6 +1991,7 @@ nav .nav__tel .callme:hover {
       -ms-grid-row-align: center;
       align-self: center;
   text-align: start;
+  padding: 5px;
 }
 
 .doctors .doctors__list-body .doctor__mini-cards-column .doctor__mini-card-text .doctor__mini-card-text-title {
@@ -2092,7 +2093,7 @@ nav .nav__tel .callme:hover {
   bottom: 0;
 }
 
-@media (max-width: 1155px) {
+@media (max-width: 1200px) {
   .doctors .doctor__cards-column .doctor__card .doctor__card-img {
     position: relative;
     width: 50%;
@@ -2102,6 +2103,8 @@ nav .nav__tel .callme:hover {
 
 .doctors .doctor__cards-column .doctor__card .doctor__card-text {
   padding: 40px 5px 0 30px;
+  z-index: 3;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -2116,8 +2119,6 @@ nav .nav__tel .callme:hover {
   line-height: 34px;
   color: #474551;
   margin-bottom: 10px;
-  z-index: 3;
-  position: relative;
   max-width: 100%;
   overflow: hidden;
 }
@@ -2175,7 +2176,7 @@ nav .nav__tel .callme:hover {
   .doctors .doctor__cards-column .doctor__card-about-doctor {
     position: relative;
     max-width: 100%;
-    margin-top: -20px;
+    margin: -20px 10px 0px 10px;
     left: 0;
     height: 100%;
   }
