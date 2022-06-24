@@ -617,7 +617,7 @@ main {
 
 .header__lang {
   position: absolute;
-  top: 20px;
+  bottom: 4px;
   right: 0;
   color: #099DBA;
 }
@@ -698,7 +698,8 @@ nav .nav__burger .burger__img {
   -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
-  max-width: 60px;
+  width: 60px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
